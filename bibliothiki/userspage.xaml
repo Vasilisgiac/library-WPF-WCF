@@ -1,0 +1,109 @@
+﻿<Window x:Class="bibliothiki.userspage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UsersPage"  Height="554.5" Width="999" Background="White">
+
+    <Grid Background="Black" >
+        <Grid RenderTransformOrigin="0.432,0.514" Margin="186,0,0,0">
+            <Grid.Background>
+                <ImageBrush ImageSource="image/8837.jpg"/>
+            </Grid.Background>
+            <Grid x:Name="wel" HorizontalAlignment="Left" Height="649" Margin="10,-59,0,-67" VerticalAlignment="Top" Width="465" Visibility="Hidden">
+                <Grid.Background>
+                    <ImageBrush ImageSource="image/movies-new.png"/>
+                </Grid.Background>
+            </Grid>
+            <ListBox x:Name="list1" HorizontalAlignment="Left" Height="291" Margin="21,59,0,0" VerticalAlignment="Top" Width="253" MouseEnter="list1_MouseEnter" Visibility="Hidden"/>
+            <DatePicker x:Name="date1" HorizontalAlignment="Left" Margin="324,137,0,0" VerticalAlignment="Top" Width="226" Focusable="False" SelectedDateChanged="date1_SelectedDateChanged" CalendarOpened="date1_CalendarOpened" Visibility="Hidden"/>
+            <DatePicker x:Name="date2" HorizontalAlignment="Left" Margin="324,214,0,0" VerticalAlignment="Top" Width="226" Focusable="False" CalendarOpened="date2_CalendarOpened" Visibility="Hidden" SelectedDateChanged="date2_SelectedDateChanged"/>
+            <Button x:Name="btn1" Content="Submit" HorizontalAlignment="Left" Margin="324,330,0,0" VerticalAlignment="Top" Width="75" Click="btn1_Click" Visibility="Hidden"/>
+            <Label x:Name="label1" Content="Select the date that you want to pick up the movie" HorizontalAlignment="Left" Margin="324,117,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" Width="275" Visibility="Hidden"/>
+            <Label x:Name="label2" Content="Select the date that you will return it" HorizontalAlignment="Left" Margin="324,194,0,0" VerticalAlignment="Top" Foreground="White" Width="226" Visibility="Hidden"/>
+            <Label x:Name="quan2" Content="Quantity" HorizontalAlignment="Left" Margin="349,273,0,0" VerticalAlignment="Top" Foreground="White" Width="66" RenderTransformOrigin="0.47,1.923" Visibility="Hidden"/>
+            <TextBox x:Name="quan" HorizontalAlignment="Left" Height="23" Margin="324,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="25" MaxLength="2" MouseEnter="quan_MouseEnter" Visibility="Hidden"/>
+            <Label x:Name="lbel3" Content="There must be at least one movie !" HorizontalAlignment="Left" Margin="349,288,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="9" Visibility="Hidden"/>
+            <Label x:Name="lbl5" Content="A  reservation has been sent&#xD;&#xA; for appovment!" HorizontalAlignment="Left" Margin="146,161,0,0" VerticalAlignment="Top" Width="312" Background="{x:Null}" Foreground="Red" Height="79" FontSize="24" Visibility="Hidden"/>
+            <Label x:Name="labeld1" Content="You must pick a date !" HorizontalAlignment="Left" Margin="551,135,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"/>
+            <Label x:Name="labeld2" Content="You must pick a date !" HorizontalAlignment="Left" Margin="550,212,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"/>
+            <Label x:Name="labeld3" Content="You must pick a movie !" HorizontalAlignment="Left" Margin="21,350,0,0" VerticalAlignment="Top" Foreground="Red" Width="253" Visibility="Hidden"/>
+            <Label x:Name="lbll1" Content="The second date must be higher than the first one!" HorizontalAlignment="Left" Margin="531,161,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"/>
+            <Button x:Name="btn10" Content="Delete" HorizontalAlignment="Left" Margin="668,102,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4" Visibility="Hidden"/>
+            <Label x:Name="lbll2" Content="Cannot be deleted!" HorizontalAlignment="Left" Margin="652,117,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"/>
+            <Label x:Name="lbll3" Content="You must pick a reservation!" HorizontalAlignment="Left" Margin="647,117,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"/>
+            <ListView x:Name="listview1" HorizontalAlignment="Left" Height="414" Margin="72,50,0,0" VerticalAlignment="Top" Width="575" MouseEnter="listview1_MouseEnter" Foreground="Black" FontStyle="Italic" Visibility="Hidden" >
+                <ListView.BorderBrush>
+                    <SolidColorBrush Color="#FF999999" Opacity="0"/>
+                </ListView.BorderBrush>
+                <ListView.Background>
+                    <SolidColorBrush Color="White" Opacity="0.9"/>
+                </ListView.Background>
+                <ListView.View>
+                    <GridView>
+                        <GridView.ColumnHeaderContainerStyle>
+                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                <!-- Set any properties you want to set -->
+                                <Setter Property="Background" Value="LightBlue" />
+                                <Setter Property="Foreground" Value="Black" />
+                                <Setter Property="FontWeight" Value="Bold" />
+                            </Style>
+                        </GridView.ColumnHeaderContainerStyle>
+                        <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="StartingDate" DisplayMemberBinding="{Binding StartingDate}"/>
+                        <GridViewColumn Header="ReturningDate" DisplayMemberBinding="{Binding ReturningDate}"/>
+                        <GridViewColumn Header="SubmitDate" DisplayMemberBinding="{Binding SubmitDate}"/>
+                        <GridViewColumn Header="Quantity" DisplayMemberBinding="{Binding Quantity}"/>
+                        <GridViewColumn Header="Accepted" DisplayMemberBinding="{Binding Accepted}"/>
+                        <GridViewColumn Header="Aborted" DisplayMemberBinding="{Binding Aborted}"/>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <Rectangle Stroke="#FF383838" HorizontalAlignment="Left" Width="186">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="image/1330319.jpg"/>
+            </Rectangle.Fill>
+            <Rectangle.Effect>
+                <DropShadowEffect x:Name="myDropShadowBitmapEffect2" ShadowDepth="0" BlurRadius="58" RenderingBias="Quality" Direction="0" />
+            </Rectangle.Effect>
+        </Rectangle>
+        <Button Content="Home" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Width="185" Height="36" Foreground="White" Click="Button_Click_2">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="White" Opacity="0.6"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF858585" Opacity="0.2"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Log out" HorizontalAlignment="Left" Margin="1,283,0,0" VerticalAlignment="Top" Width="184" Height="36" Click="Button_Click_1" Foreground="White">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="White" Opacity="0.6"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF858585" Opacity="0.2"/>
+            </Button.Background>
+        </Button>
+        <Button Content="new" HorizontalAlignment="Left" Margin="0,201,0,0" VerticalAlignment="Top" Width="185" Height="36" Foreground="White" Click="Button_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="White" Opacity="0.6"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF858585" Opacity="0.2"/>
+            </Button.Background>
+        </Button>
+        <Button Content="History" HorizontalAlignment="Left" Margin="0,242,0,0" VerticalAlignment="Top" Width="185" Height="36" Foreground="White" Click="Button_Click_3">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="White" Opacity="0.6"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF858585" Opacity="0.2"/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="txt1" HorizontalAlignment="Left" Margin="33,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="120" Height="22" FontSize="16"><Run Text="yoooooo"/></TextBlock>
+        <Grid HorizontalAlignment="Left" Height="18" Margin="10,10,0,0" VerticalAlignment="Top" Width="18">
+            <Grid.Background>
+                <ImageBrush ImageSource="image/admin.png"/>
+            </Grid.Background>
+        </Grid>
+    </Grid>
+</Window>

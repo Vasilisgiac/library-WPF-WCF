@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB078B81-4E79-4A43-800C-3C6DFBB77E58}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bibliothiki</RootNamespace>
+    <AssemblyName>bibliothiki</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="managerpage.xaml.cs">
+      <DependentUpon>managerpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerRegistration.xaml.cs">
+      <DependentUpon>ManagerRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AllReservationsManageReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BookAvailabilityReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BookLoadingReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CopiesReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DeleteReservationReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EmailReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LoginUser3Refence\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LoginUserReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ModifyAndCheckReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReadNamesReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReadUsersReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReservationReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReservationsManageReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ValidationReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegistration.xaml.cs">
+      <DependentUpon>UserRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userspage.xaml.cs">
+      <DependentUpon>userspage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="managerpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManagerRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userspage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\AllReservationsManageReference\Service1.wsdl" />
+    <None Include="Service References\AllReservationsManageReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AllReservationsManageReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AllReservationsManageReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookAvailabilityReference\Service1.wsdl" />
+    <None Include="Service References\BookAvailabilityReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookAvailabilityReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookAvailabilityReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookLoadingReference\Service1.wsdl" />
+    <None Include="Service References\BookLoadingReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookLoadingReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookLoadingReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CopiesReference\Service1.wsdl" />
+    <None Include="Service References\CopiesReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CopiesReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeleteReservationReference\Service1.wsdl" />
+    <None Include="Service References\DeleteReservationReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeleteReservationReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeleteReservationReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailReference\Service1.wsdl" />
+    <None Include="Service References\EmailReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginUser3Refence\Service1.wsdl" />
+    <None Include="Service References\LoginUser3Refence\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginUser3Refence\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginUser3Refence\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginUser3Refence\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginUserReference\Service1.wsdl" />
+    <None Include="Service References\LoginUserReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginUserReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginUserReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModifyAndCheckReference\Service1.wsdl" />
+    <None Include="Service References\ModifyAndCheckReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModifyAndCheckReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModifyAndCheckReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReadNamesReference\Service1.wsdl" />
+    <None Include="Service References\ReadNamesReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReadNamesReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReadNamesReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReadUsersReference\Service1.wsdl" />
+    <None Include="Service References\ReadUsersReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReadUsersReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReadUsersReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReservationReference\Service1.wsdl" />
+    <None Include="Service References\ReservationReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReservationReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReservationReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReservationsManageReference\Service1.wsdl" />
+    <None Include="Service References\ReservationsManageReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReservationsManageReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReservationsManageReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ValidationReference\Service1.wsdl" />
+    <None Include="Service References\ValidationReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ValidationReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ValidationReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AllReservationsManageReference\" />
+    <WCFMetadataStorage Include="Service References\BookAvailabilityReference\" />
+    <WCFMetadataStorage Include="Service References\BookLoadingReference\" />
+    <WCFMetadataStorage Include="Service References\CopiesReference\" />
+    <WCFMetadataStorage Include="Service References\DeleteReservationReference\" />
+    <WCFMetadataStorage Include="Service References\EmailReference\" />
+    <WCFMetadataStorage Include="Service References\LoginUser3Refence\" />
+    <WCFMetadataStorage Include="Service References\LoginUserReference\" />
+    <WCFMetadataStorage Include="Service References\ModifyAndCheckReference\" />
+    <WCFMetadataStorage Include="Service References\ReadNamesReference\" />
+    <WCFMetadataStorage Include="Service References\ReadUsersReference\" />
+    <WCFMetadataStorage Include="Service References\ReservationReference\" />
+    <WCFMetadataStorage Include="Service References\ReservationsManageReference\" />
+    <WCFMetadataStorage Include="Service References\ValidationReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginUserReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginUserReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginUserReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginUserReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ValidationReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ValidationReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ValidationReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ValidationReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginUser3Refence\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginUser3Refence\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginUser3Refence\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginUser3Refence\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\uMnd7Y.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Welcome to  our  library _.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\1330319.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\grunge-gradient-abstract-hd-wallpaper-1920x1080-2395.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Wallpapers-room_com___g4_by_alexander-gg_2560x1600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\profile-icon-png-890.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Icon-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\1502024.jpg" />
+    <Resource Include="image\a_hole_inside_3d-1680x1050.jpg" />
+    <Resource Include="image\dark_aurora-2560x1600.jpg" />
+    <Resource Include="image\grey-gradient-abstract-hd-wallpaper-1920x1200-4431.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookLoadingReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookLoadingReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookLoadingReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookLoadingReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReadNamesReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReadNamesReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReadNamesReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReadNamesReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReservationReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReservationReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReservationReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReservationReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReservationsManageReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReservationsManageReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReservationsManageReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReservationsManageReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteReservationReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteReservationReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteReservationReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteReservationReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AllReservationsManageReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AllReservationsManageReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AllReservationsManageReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AllReservationsManageReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModifyAndCheckReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModifyAndCheckReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModifyAndCheckReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModifyAndCheckReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReadUsersReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReadUsersReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReadUsersReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReadUsersReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookAvailabilityReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookAvailabilityReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookAvailabilityReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookAvailabilityReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\HD-Library-Wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Library-HD-Wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CopiesReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CopiesReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CopiesReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CopiesReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\movies-wall--blur-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\8837.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\best_movies_wallpaper_by_mrsoundster-d8eoe30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\movies-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\movies-wall-normal-small.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

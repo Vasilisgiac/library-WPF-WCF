@@ -1,0 +1,62 @@
+﻿<Window x:Class="bibliothiki.UserRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UserRegistration" Height="752.017" Width="570.333">
+    <Window.Background>
+        <ImageBrush ImageSource="image/uMnd7Y.jpg"/>
+    </Window.Background>
+    <Viewbox Margin="0,0,2,0">
+        <Grid Width="367">
+            <Grid.Background>
+                <ImageBrush ImageSource="image/movies-wall-normal-small.jpg"/>
+            </Grid.Background>
+
+
+
+
+            <Rectangle HorizontalAlignment="Left" Height="429" Margin="27,29,0,0" VerticalAlignment="Top" Width="320" RadiusX="20" RadiusY="20" Fill="#FF060627" Stroke="White" Opacity="0.7">
+
+                <Rectangle.Effect>
+                    <DropShadowEffect x:Name="myDropShadowBitmapEffect2" ShadowDepth="0" BlurRadius="20" RenderingBias="Quality" />
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="41,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Background="White" MouseEnter="textbox1_MouseEnter">
+                
+            </TextBox>
+            <TextBox x:Name="textbox2" Height="23" Margin="198,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138" MouseEnter="textbox2_MouseEnter" BorderBrush="#FFABADB3" TextChanged="textbox2_TextChanged"/>
+            <TextBlock HorizontalAlignment="Left" Margin="41,90,0,0" TextWrapping="Wrap" Text="Create your username" VerticalAlignment="Top" Foreground="White"/>
+            <TextBox x:Name="textbox3" HorizontalAlignment="Left" Height="23" Margin="41,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" MouseEnter="textbox3_MouseEnter">
+               
+            </TextBox>
+            <TextBlock HorizontalAlignment="Left" Margin="41,145,0,0" TextWrapping="Wrap" Text="Create a password" VerticalAlignment="Top" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="41,201,0,0" TextWrapping="Wrap" Text="Confirm your password" VerticalAlignment="Top" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="41,257,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" Foreground="White"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="41,273,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"></TextBox>
+            <TextBlock HorizontalAlignment="Left" Margin="41,311,0,0" TextWrapping="Wrap" Text="Telephone" VerticalAlignment="Top" RenderTransformOrigin="0.53,2.375" Foreground="White"/>
+            <TextBox x:Name="textbox6" HorizontalAlignment="Left" Height="23" Margin="41,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" MouseEnter="textbox6_MouseEnter"/>
+            <TextBox x:Name="textbox7" HorizontalAlignment="Left" Height="23" Margin="41,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" MouseEnter="textbox7_MouseEnter" MaxLength="10"/>
+            <TextBlock HorizontalAlignment="Left" Margin="41,368,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" RenderTransformOrigin="0.53,2.375" Foreground="White"/>
+            <TextBox x:Name="textbox8" HorizontalAlignment="Left" Height="22" Margin="41,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" MouseEnter="textbox8_MouseEnter" MaxLength="3"/>
+            <TextBlock HorizontalAlignment="Left" Margin="198,36,0,0" TextWrapping="Wrap" Text="Last name" VerticalAlignment="Top" Foreground="White"/>
+            <Button Content="Submit" HorizontalAlignment="Left" Margin="262,427,0,29" Width="74" Click="Button_Click_1"/>
+            <Button Content="Cancel" HorizontalAlignment="Left" Margin="182,427,0,29" Width="75" Click="Button_Click" RenderTransformOrigin="0.492,0.335"/>
+            <PasswordBox x:Name="textbox4" HorizontalAlignment="Left" Margin="41,161,0,0" VerticalAlignment="Top" Width="295" Height="23" MouseEnter="textbox4_MouseEnter" />
+            <PasswordBox x:Name="textbox5" HorizontalAlignment="Left" Margin="41,217,0,0" VerticalAlignment="Top" Width="295" Height="23" MouseEnter="textbox5_MouseEnter"/>
+            <Label x:Name="label1" Content="There must be at least one character!" Margin="41,52,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149" Visibility="Hidden" />
+            <Label x:Name="label2" Content="There must be at least one character!" Margin="198,52,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149"  Visibility="Hidden"/>
+            <Label x:Name="label4" Content="There must be at least one character!" Margin="41,161,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149"  Visibility="Hidden"/>
+            <Label x:Name="label3" Content="There must be at least one character!" Margin="41,106,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149" Visibility="Hidden"  />
+            <Label x:Name="label31" Content="Username already exists.Try another one!" Margin="41,106,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="171" Visibility="Hidden"  />
+            <Label x:Name="label6" Content="There must be at least one character!" Margin="41,273,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149"  Visibility="Hidden"/>
+            <Label x:Name="label61" Content="Insert a valid email address!" Margin="41,273,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149"  Visibility="Hidden"/>
+            <Label x:Name="label5" Content="There must be at least one character!" Margin="41,217,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149" Visibility="Hidden" />
+            <Label x:Name="label51" Content="Passwords are not the same!" Margin="41,217,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149" Visibility="Hidden" />
+            <Label x:Name="label7" Content="There must be at least one character!" Margin="41,327,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149" Visibility="Hidden" />
+            <Label x:Name="label71" Content="You must enter a 10-digit number!" Margin="41,327,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149" Visibility="Hidden" />
+            <Label x:Name="label8" Content="There must be at least one character!" Margin="41,384,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149" Visibility="Hidden" />
+            <Label x:Name="label81" Content="You must enter a number!" Margin="41,384,0,0" VerticalAlignment="Top" Height="33" FontSize="8" Background="{x:Null}" Foreground="Red" HorizontalAlignment="Left" Width="149" Visibility="Hidden" />
+            <TextBlock HorizontalAlignment="Left" Margin="41,36,0,0" TextWrapping="Wrap" Text="First name" VerticalAlignment="Top" Foreground="White"/>
+
+        </Grid>
+    </Viewbox>
+</Window>

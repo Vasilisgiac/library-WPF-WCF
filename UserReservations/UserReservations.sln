@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserReservations", "UserReservations.csproj", "{D1394D25-5171-4AD4-960D-59F4864A9590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllReservationsManage", "AllReservationsManage\AllReservationsManage.csproj", "{700C68CA-B229-4FB0-B59F-C10296E45AEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1394D25-5171-4AD4-960D-59F4864A9590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1394D25-5171-4AD4-960D-59F4864A9590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1394D25-5171-4AD4-960D-59F4864A9590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1394D25-5171-4AD4-960D-59F4864A9590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{700C68CA-B229-4FB0-B59F-C10296E45AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700C68CA-B229-4FB0-B59F-C10296E45AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700C68CA-B229-4FB0-B59F-C10296E45AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700C68CA-B229-4FB0-B59F-C10296E45AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
